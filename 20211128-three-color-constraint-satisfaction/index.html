@@ -1,0 +1,23 @@
+<!doctype html>
+
+<head>
+  <title>CSP Tests</title>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css"></link>
+</head>
+
+<body>
+
+  <h1>3-color graph</h1>
+
+  <p>The map below was colored using constraint propagation. No connected territories are to share the same color.</p>
+
+  <div id="map-container">
+    <img src="Australia_states_blank.svg"></img>
+    <svg id="nodes"></svg>
+  </div>
+
+  <script type="text/babel" src="app.jsx"></script>
+</body>
