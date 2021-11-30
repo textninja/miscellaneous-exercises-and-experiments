@@ -5,7 +5,9 @@ import yaml
 with open(os.getenv("SECRETS_PATH", "secrets.yaml")) as f:
   openai.api_key = yaml.load(f, Loader=yaml.FullLoader)["apikey"]
 
-prompt = "This common lisp program writes hello world to stdout:"
+prompt = """Nope, that didn't work, the text message still isn't being sent. I finally got it working with this code:
+
+001 const twilio = require('twilio');"""
 
 response = openai.Completion.create(
   engine="davinci",
@@ -17,3 +19,5 @@ response = openai.Completion.create(
   presence_penalty=0.0)
 
 print(prompt + response["choices"][0]["text"])
+
+
